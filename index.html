@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,108 +8,374 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 :root{--bg:#080808;--text:#f5f2ee;--muted:#aaa39d;--line:#282828;--accent:#e9d9d2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");z-index:20}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+
+body:before{
+content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+z-index:20
+}
+
 section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:9vw 7vw;position:relative}
-.hero{min-height:100svh;text-align:center;background:radial-gradient(circle at 50% 45%,#211516 0,#0b0909 34%,#080808 65%)}
+
+.hero{
+min-height:100svh;text-align:center;
+background:radial-gradient(circle at 50% 45%,#211516 0,#0b0909 34%,#080808 65%)
+}
+
 .kicker{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:#bdb5af;margin-bottom:26px}
 h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(58px,12vw,160px);line-height:.9;margin:0;letter-spacing:-.045em}
 .hero p{color:var(--muted);margin:28px 0 40px;font-size:14px;letter-spacing:.05em}
-.enter{border:1px solid #555;border-radius:100px;padding:13px 22px;color:white;background:transparent;cursor:pointer;letter-spacing:.15em;font-size:10px;text-transform:uppercase;transition:.3s}
+
+.enter{
+border:1px solid #555;border-radius:100px;padding:13px 22px;color:white;
+background:transparent;cursor:pointer;letter-spacing:.15em;font-size:10px;
+text-transform:uppercase;transition:.3s
+}
 .enter:hover{background:#eee;color:#111}
-.corner{position:absolute;font-size:10px;color:#777;letter-spacing:.16em}.tl{top:28px;left:30px}.tr{top:28px;right:30px}.bl{bottom:28px;left:30px}.br{bottom:28px;right:30px}
-.wrap{max-width:1100px;width:100%}.split{display:grid;grid-template-columns:1fr 1.25fr;gap:8vw;align-items:center}
+
+.corner{position:absolute;font-size:10px;color:#777;letter-spacing:.16em}
+.tl{top:28px;left:30px}.tr{top:28px;right:30px}
+.bl{bottom:28px;left:30px}.br{bottom:28px;right:30px}
+
+.wrap{max-width:1100px;width:100%}
+.split{display:grid;grid-template-columns:1fr 1.25fr;gap:8vw;align-items:center}
 .eyebrow{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#777;margin-bottom:22px}
 .big{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,78px);line-height:1.02;margin:0 0 24px;font-weight:400}
 .copy{color:#aaa39d;line-height:1.9;font-size:15px;max-width:480px}
+
 .photo{width:100%;display:block;object-fit:cover;max-height:75vh;border-radius:2px;filter:saturate(.8)}
 .photo.tall{aspect-ratio:4/5}.photo.wide{aspect-ratio:4/3}
+
 .quote{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(34px,5vw,70px);line-height:1.12;max-width:900px;text-align:center}
 .date{font-size:12px;letter-spacing:.3em;color:#89827c;margin-top:28px;text-align:center}
+
 .memories{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;align-items:start}
-.memories figure{margin:0}.m1{grid-column:1/8}.m2{grid-column:8/13;margin-top:9vw!important}.m3{grid-column:2/7;margin-top:3vw!important}.m4{grid-column:7/13;margin-top:-5vw!important}.m5{grid-column:4/10;margin-top:2vw!important}
-.memories img{width:100%;display:block;max-height:75vh;object-fit:cover}.cap{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#777;margin-top:12px}
-.three{text-align:center}.three .number{font-size:clamp(150px,30vw,390px);font-family:"Playfair Display",serif;line-height:.7;margin:0}.three h2{font-size:12px;letter-spacing:.5em;text-transform:uppercase;font-weight:500;margin-top:45px}
-.letter{max-width:760px;margin:auto}.letter h2{text-align:center;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(42px,6vw,78px);margin:0 0 50px}.letter p{font-family:"Playfair Display",serif;font-size:20px;line-height:1.9;color:#c4bdb7;margin:0 0 25px}.sign{text-align:right;margin-top:45px;color:#eee;font-family:"Playfair Display",serif;font-style:italic;font-size:24px}
-.final{text-align:center;min-height:100svh;background:radial-gradient(circle at 50% 50%,#251719 0,#0a0808 55%,#080808 75%)}.final h2{font-family:"Playfair Display",serif;font-size:clamp(45px,8vw,105px);font-weight:400;line-height:.95;margin:0}.final .small{margin-top:35px;color:#89827c;letter-spacing:.2em;text-transform:uppercase;font-size:10px}
-.music{position:fixed;right:22px;bottom:22px;z-index:30;border:1px solid #333;background:rgba(12,12,12,.8);backdrop-filter:blur(14px);border-radius:100px;padding:10px 14px;color:#bbb;font-size:10px;letter-spacing:.12em;display:flex;gap:9px;align-items:center}.dot{width:7px;height:7px;border-radius:50%;background:#777}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}.reveal.show{opacity:1;transform:none}
-@media(max-width:760px){section{padding:90px 22px}.split{grid-template-columns:1fr;gap:45px}.memories{display:flex;flex-direction:column;gap:42px}.memories figure{margin:0!important}.m1,.m2,.m3,.m4,.m5{width:100%}.memories img{max-height:70vh}.quote{font-size:39px}.letter p{font-size:18px;line-height:1.8}.corner{display:none}}
+.memories figure{margin:0}
+.m1{grid-column:1/8}.m2{grid-column:8/13;margin-top:9vw!important}
+.m3{grid-column:2/7;margin-top:3vw!important}
+.m4{grid-column:7/13;margin-top:-5vw!important}
+.m5{grid-column:4/10;margin-top:2vw!important}
+
+.memories img{width:100%;display:block;max-height:75vh;object-fit:cover}
+.cap{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#777;margin-top:12px}
+
+.three{text-align:center}
+.three .number{font-size:clamp(150px,30vw,390px);font-family:"Playfair Display",serif;line-height:.7;margin:0}
+.three h2{font-size:12px;letter-spacing:.5em;text-transform:uppercase;font-weight:500;margin-top:45px}
+
+.letter{max-width:760px;margin:auto}
+.letter h2{text-align:center;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(42px,6vw,78px);margin:0 0 50px}
+.letter p{font-family:"Playfair Display",serif;font-size:20px;line-height:1.9;color:#c4bdb7;margin:0 0 25px}
+.sign{text-align:right;margin-top:45px;color:#eee;font-family:"Playfair Display",serif;font-style:italic;font-size:24px}
+
+.final{
+text-align:center;min-height:100svh;
+background:radial-gradient(circle at 50% 50%,#251719 0,#0a0808 55%,#080808 75%)
+}
+.final h2{font-family:"Playfair Display",serif;font-size:clamp(45px,8vw,105px);font-weight:400;line-height:.95;margin:0}
+.final .small{margin-top:35px;color:#89827c;letter-spacing:.2em;text-transform:uppercase;font-size:10px}
+
+/* MUSIC BUTTON */
+.music{
+position:fixed;
+right:22px;
+bottom:22px;
+z-index:30;
+border:1px solid #333;
+background:rgba(12,12,12,.8);
+backdrop-filter:blur(14px);
+border-radius:100px;
+padding:10px 14px;
+color:#bbb;
+font-size:10px;
+letter-spacing:.12em;
+display:flex;
+gap:9px;
+align-items:center;
+cursor:pointer;
+user-select:none;
+transition:.3s;
+}
+
+.music:hover{
+background:rgba(35,35,35,.9);
+color:white;
+}
+
+.dot{
+width:7px;
+height:7px;
+border-radius:50%;
+background:#777;
+transition:.3s;
+}
+
+.music.playing .dot{
+background:#e9d9d2;
+box-shadow:0 0 10px #e9d9d2;
+}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:760px){
+section{padding:90px 22px}
+.split{grid-template-columns:1fr;gap:45px}
+.memories{display:flex;flex-direction:column;gap:42px}
+.memories figure{margin:0!important}
+.m1,.m2,.m3,.m4,.m5{width:100%}
+.memories img{max-height:70vh}
+.quote{font-size:39px}
+.letter p{font-size:18px;line-height:1.8}
+.corner{display:none}
+}
 </style>
 </head>
+
 <body>
+
 <section class="hero" id="top">
-<div class="corner tl">02 / 09 / 23</div><div class="corner tr">CHAPTER III</div>
-<div class="corner bl">FOR TUKIR MA</div><div class="corner br">2026</div>
+<div class="corner tl">02 / 09 / 23</div>
+<div class="corner tr">CHAPTER III</div>
+<div class="corner bl">FOR TUKIR MA</div>
+<div class="corner br">2026</div>
+
 <div class="reveal">
 <div class="kicker">a little thing i made for you</div>
 <h1>Tukir Ma</h1>
 <p>three years. one story. countless little moments.</p>
-<button class="enter" onclick="document.querySelector('#begin').scrollIntoView({behavior:'smooth'})">Enter our story&nbsp; →</button>
+
+<button class="enter" onclick="startMusic();document.querySelector('#begin').scrollIntoView({behavior:'smooth'})">
+Enter our story&nbsp; →
+</button>
 </div>
 </section>
 
+
 <section id="begin">
 <div class="wrap split reveal">
-<div><div class="eyebrow">01 — The beginning</div><h2 class="big">I wasn't looking for love.</h2>
-<p class="copy">I never thought I'd fall in love until I found you. Somehow, among all the ordinary days, you became the most extraordinary part of mine.</p></div>
+<div>
+<div class="eyebrow">01 — The beginning</div>
+<h2 class="big">I wasn't looking for love.</h2>
+<p class="copy">
+I never thought I'd fall in love until I found you. Somehow, among all the ordinary days, you became the most extraordinary part of mine.
+</p>
+</div>
+
 <img class="photo tall" src="photos/1.jpg" alt="Our memory">
 </div>
 </section>
 
+
 <section>
 <div class="wrap">
+
 <div class="eyebrow reveal">02 — Us</div>
+
 <div class="memories">
-<figure class="m1 reveal"><img src="photos/2.jpg" alt="Our memory"><figcaption class="cap">one of my favourite memories</figcaption></figure>
-<figure class="m2 reveal"><img src="photos/3.jpg" alt="Our memory"><figcaption class="cap">the little things</figcaption></figure>
-<figure class="m3 reveal"><img src="photos/4.jpg" alt="Our memory"><figcaption class="cap">just us</figcaption></figure>
-<figure class="m4 reveal"><img src="photos/5.jpg" alt="Our memory"><figcaption class="cap">and all the silly moments</figcaption></figure>
-<figure class="m5 reveal"><img src="photos/1.jpg" alt="Our memory"><figcaption class="cap">still my favourite person</figcaption></figure>
+
+<figure class="m1 reveal">
+<img src="photos/2.jpg" alt="Our memory">
+<figcaption class="cap">one of my favourite memories</figcaption>
+</figure>
+
+<figure class="m2 reveal">
+<img src="photos/3.jpg" alt="Our memory">
+<figcaption class="cap">the little things</figcaption>
+</figure>
+
+<figure class="m3 reveal">
+<img src="photos/4.jpg" alt="Our memory">
+<figcaption class="cap">just us</figcaption>
+</figure>
+
+<figure class="m4 reveal">
+<img src="photos/5.jpg" alt="Our memory">
+<figcaption class="cap">and all the silly moments</figcaption>
+</figure>
+
+<figure class="m5 reveal">
+<img src="photos/1.jpg" alt="Our memory">
+<figcaption class="cap">still my favourite person</figcaption>
+</figure>
+
 </div>
 </div>
 </section>
+
 
 <section>
 <div class="wrap reveal" style="text-align:center">
+
 <div class="eyebrow">03 — Three years</div>
-<div class="three"><div class="number">3</div><h2>years of us</h2></div>
-<p class="date">02 SEPTEMBER 2023&nbsp;&nbsp; — &nbsp;&nbsp;02 SEPTEMBER 2026</p>
+
+<div class="three">
+<div class="number">3</div>
+<h2>years of us</h2>
+</div>
+
+<p class="date">
+02 SEPTEMBER 2023&nbsp;&nbsp; — &nbsp;&nbsp;02 SEPTEMBER 2026
+</p>
+
 </div>
 </section>
 
+
 <section>
-<div class="wrap reveal"><p class="quote">“If I could go back to the beginning, I'd still walk toward you.”</p><div class="date">and choose you again.</div></div>
+<div class="wrap reveal">
+
+<p class="quote">
+“If I could go back to the beginning, I'd still walk toward you.”
+</p>
+
+<div class="date">
+and choose you again.
+</div>
+
+</div>
 </section>
+
 
 <section>
 <div class="letter reveal">
-<div class="eyebrow" style="text-align:center">04 — A letter</div>
+
+<div class="eyebrow" style="text-align:center">
+04 — A letter
+</div>
+
 <h2>To my Tukir Ma,</h2>
-<p>Three years ago, I had no idea how much one person could change the way I see everything. You came into my life, and slowly, without even realizing it, you became a part of my every ordinary day.</p>
-<p>We've had our laughs, our silly moments, our misunderstandings, our quiet moments and all those tiny memories that probably mean more to me than I know how to explain.</p>
-<p>I don't want a perfect story. I just want our story—the real one, with all its beautiful and imperfect little chapters. Because after everything, you're still the person I want beside me when life gets loud and when it gets quiet.</p>
-<p>Thank you for being you. Thank you for staying, for caring, for making ordinary moments feel special. And thank you for giving me a love I never knew I was waiting for.</p>
-<p>Happy 3rd Anniversary, Tukir Ma. ❤️</p>
-<p>Here's to every memory we've made, every dream we'll chase, and every chapter that hasn't been written yet.</p>
-<div class="sign">— yours, always.</div>
+
+<p>
+Three years ago, I had no idea how much one person could change the way I see everything. You came into my life, and slowly, without even realizing it, you became a part of my every ordinary day.
+</p>
+
+<p>
+We've had our laughs, our silly moments, our misunderstandings, our quiet moments and all those tiny memories that probably mean more to me than I know how to explain.
+</p>
+
+<p>
+I don't want a perfect story. I just want our story—the real one, with all its beautiful and imperfect little chapters. Because after everything, you're still the person I want beside me when life gets loud and when it gets quiet.
+</p>
+
+<p>
+Thank you for being you. Thank you for staying, for caring, for making ordinary moments feel special. And thank you for giving me a love I never knew I was waiting for.
+</p>
+
+<p>
+Happy 3rd Anniversary, Tukir Ma. ❤️
+</p>
+
+<p>
+Here's to every memory we've made, every dream we'll chase, and every chapter that hasn't been written yet.
+</p>
+
+<div class="sign">
+— yours, always.
+</div>
+
 </div>
 </section>
+
 
 <section class="final">
+
 <div class="reveal">
-<div class="eyebrow">02.09.23 — forever</div>
-<h2>Chapter III<br>complete.</h2>
-<div class="small">our story continues →</div>
+
+<div class="eyebrow">
+02.09.23 — forever
+</div>
+
+<h2>
+Chapter III<br>
+complete.
+</h2>
+
+<div class="small">
+our story continues →
+</div>
+
 </div>
 </section>
 
-<div class="music"><span class="dot"></span> OUR SONG · add your audio</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music" id="musicButton" onclick="toggleMusic()">
+<span class="dot"></span>
+<span id="musicText">OUR SONG · TAP TO PLAY</span>
+</div>
+
+
 <script>
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+
+/* REVEAL ANIMATION */
+const obs=new IntersectionObserver(
+entries=>entries.forEach(e=>{
+if(e.isIntersecting)e.target.classList.add('show')
+}),
+{threshold:.12}
+);
+
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+
+/* MUSIC */
+const music = document.getElementById("bgMusic");
+const musicButton = document.getElementById("musicButton");
+const musicText = document.getElementById("musicText");
+
+
+function startMusic(){
+
+music.play().then(()=>{
+
+musicButton.classList.add("playing");
+musicText.textContent="OUR SONG · PLAYING";
+
+}).catch(()=>{});
+
+}
+
+
+function toggleMusic(){
+
+if(music.paused){
+
+startMusic();
+
+}else{
+
+music.pause();
+
+musicButton.classList.remove("playing");
+musicText.textContent="OUR SONG · PAUSED";
+
+}
+
+}
+
+
+/* TRY TO START MUSIC ON FIRST USER INTERACTION */
+document.addEventListener("click", function(){
+
+if(music.paused){
+startMusic();
+}
+
+}, {once:true});
+
 </script>
+
 </body>
 </html>
+```
